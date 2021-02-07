@@ -1,54 +1,55 @@
-    document.getElementById('searchButton').addEventListener('click', function(){
+document.getElementById('searchButton').addEventListener('click', function () {
 
-        const recipeName = document.getElementById('inputArea').value;
-        
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
+    const recipeName = document.getElementById('inputArea').value;
+
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
         .then(res => res.json())
         .then(data => {
-    
+
             recipeInfo(data.meals);
-            
+
         })
 
-        const recipeInfo = recipes => {
-        
-            const searchedRecipe = document.getElementById("searchResultDiv");
-            searchedRecipe.innerHTML = "";
-    
-            recipes.forEach( recipe => {
-                    
-                    const recipeItemDiv = document.createElement("div");
-                    recipeItemDiv.className = "recipeItem";
-    
-                    const recipeInfo = `
+    const recipeInfo = recipes => {
+
+        const searchedRecipe = document.getElementById("searchResultDiv");
+        searchedRecipe.innerHTML = "";
+
+        recipes.forEach(recipe => {
+
+            const recipeItemDiv = document.createElement("div");
+            recipeItemDiv.className = "recipeItem";
+
+            const recipeInfo = `
                    <div>
                    <img class="item" onclick="recipeDetails('${recipe.strMeal}')" src="${recipe.strMealThumb}"> 
                    <h5 class="title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h5>
                    </div>
                     
                     `;
-                    
-                    recipeItemDiv.innerHTML = recipeInfo;
-                    searchedRecipe.appendChild(recipeItemDiv);
-                });
-        }
-        
-    })
 
-    const recipeDetails = recipeDetails => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeDetails}`)
-            .then(res => res.json())
-            .then(data => {
-                renderRecipeInfo(data.meals[0]);
-                console.log(data.meals[0]);
-            })
+            recipeItemDiv.innerHTML = recipeInfo;
+            searchedRecipe.appendChild(recipeItemDiv);
+            document.getElementById('inputArea').value = "";
+        });
     }
 
-    const renderRecipeInfo = recipe => {
-        const recipeIngredients = document.getElementById("ingredientsList");
-        recipeIngredients.innerHTML =
-            `<img class="ingredientsImage" src="${recipe.strMealThumb}">
-            <h3 class="title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h3>
+})
+
+const recipeDetails = recipeDetails => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeDetails}`)
+        .then(res => res.json())
+        .then(data => {
+            renderRecipeInfo(data.meals[0]);
+            console.log(data.meals[0]);
+        })
+}
+
+const renderRecipeInfo = recipe => {
+    const recipeIngredients = document.getElementById("ingredientsList");
+    recipeIngredients.innerHTML =
+        `<img class="ingredientsImage" src="${recipe.strMealThumb}">
+            <h1 class="h1Title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h1>
             <p class="ingredientsLabel">Ingredients</p>
             <ul>
             <li class="listItems">${recipe.strMeasure1}${recipe.strIngredient1}</li>
@@ -62,4 +63,4 @@
             <li class="listItems">${recipe.strMeasure9}${recipe.strIngredient9}</li>
             <li class="listItems">${recipe.strMeasure10}${recipe.strIngredient10}</li>
           </ul>`;
-    }
+}
