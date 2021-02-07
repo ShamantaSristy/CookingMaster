@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(26, 26,27);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: rgb(26, 26,27);
+}
+.container{
+    width: 90%;
+    height: 300px;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.brandName{
+    text-align: center;
+    font-size: 4rem;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+form{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 20px;
+    background-color: rgb(26, 26,27);
+    border-radius: 5px;
+}
+form input{
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    display: flex;
+}
+/* form .icon{
+     width: 9%;
+     font-size: 3rem;
+     margin: -9px;
+     color: rgb(75, 75, 75) ;
+} */
+/* .searchButton{
+     font-size: 1rem;
+     margin: 20px 10px;
+     padding: 10px;
+} */
+#searchResultDiv{
+     margin-top: 50px;
+     width: 100%;
+     display: grid;
+     grid-gap: 25px;
+     grid-template-columns: repeat(3, 1fr);
+}
+.item{
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(37, 37, 37);
+    padding: 15px;
+    overflow: hidden;
+}
+.item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+.item .title{
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.ingredientsLabel{
+    color: whitesmoke;
+    margin: 20px 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.listItems{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 200;
+}
