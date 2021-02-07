@@ -21,8 +21,10 @@
                     recipeItemDiv.className = "recipeItem";
     
                     const recipeInfo = `
-                    <img class="item" onclick="recipeDetails('${recipe.strMeal}')" src="${recipe.strMealThumb}"> 
-                    <h5 class="title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h5>
+                   <div>
+                   <img class="item" onclick="recipeDetails('${recipe.strMeal}')" src="${recipe.strMealThumb}"> 
+                   <h5 class="title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h5>
+                   </div>
                     
                     `;
                     
@@ -46,6 +48,7 @@
         const recipeIngredients = document.getElementById("ingredientsList");
         recipeIngredients.innerHTML =
             `<img class="ingredientsImage" src="${recipe.strMealThumb}">
+            <h3 class="title" onclick="recipeDetails('${recipe.strMeal}')" class="meal-name" >${recipe.strMeal}</h3>
             <p class="ingredientsLabel">Ingredients</p>
             <ul>
             <li class="listItems">${recipe.strMeasure1}${recipe.strIngredient1}</li>

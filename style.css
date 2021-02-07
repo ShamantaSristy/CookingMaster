@@ -18,9 +18,9 @@ section{
     padding: 100px 0;
     background-color: rgb(26, 26,27);
 }
-/* .navSection{
-    justify-content: end;
-} */
+.navSection{
+    align-content:end;
+}
 .container{
     width: 90%;
     height: 300px;
@@ -76,14 +76,15 @@ form input{
     overflow: hidden;
 }
 .item img{
-    width: 100%;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
     border-radius: 4px;
 }
 .title{
     color: whitesmoke;
-    margin: 20px 10px 0 0;
-    font-size: 1.8rem;
+    margin: 10px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 .ingredientsLabel{
