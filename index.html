@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required MetaData -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>CooKing Master</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- StyleSheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Icon -->
-    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+  <!-- Required MetaData -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>CooKing Master</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- StyleSheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Icon -->
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
 </head>
+
 <body>
-    <!-- Main section -->
-    <section>
+  <!-- Main section -->
+  <section>
 
-        <!-- Navbar -->
-        <div >
-            <nav class="navbar navbar-light bg-dark nav justify-content-end">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Recipes</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
-                    </li>
-                  </ul>
-              </nav>
+    <!-- Navbar -->
+    <div>
+      <nav class="navbar navbar-light bg-dark nav justify-content-end">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Brand Name and searchBar -->
+    <div class="container">
+      <h1 class="brandName">CooKing Master</h1>
+      <form class="col-md-6 m-auto py-5">
+        <div class="input-group mb-3">
+          <input id="inputArea" type="text" class="form-control" placeholder="Search Your Favourite Recipes Here">
+          <div>
+            <button id="searchButton" type="button" class="btn btn-primary" type="button">Search</button>
           </div>
-        <!-- Brand Name and searchBar -->
-        <div class="container">
-            <h1 class="brandName">CooKing Master</h1>
-            <form class="col-md-6 m-auto py-5">
-                 <div class="input-group mb-3">
-                    <input id="inputArea" type="text" class="form-control"  placeholder="Search Your Favourite Recipes Here">
-                    <div>
-                        <button id="searchButton" type="button" class="btn btn-primary" type="button">Search</button>
-                    </div>
-                 </div>
-            </form>
-            
-
-            <div id="searchResultDiv">
-
-                </div>
-                
-
-                <div id="ingredientsList">
-                    
-            </div>
         </div>
-    </section>
-    <!--Javascript-->
-    <script src="script.js"></script>
+      </form>
+
+      <div id="searchResultDiv">
+
+      </div>
+
+
+      <div id="ingredientsList">
+        <ul id="list">
+
+        </ul>
+
+      </div>
+    </div>
+  </section>
+  <!--Javascript-->
+  <script src="script.js"></script>
 </body>
+
 </html>
